@@ -1,0 +1,13 @@
+<div class="card hover-raise shadow-sm mb-4 mt-4 mt-lg-0">
+  <div class="card-body">
+    <strong>Department</strong>
+    <h5 class="mt-2"><a [routerLink]="['/jobs',job.id]">{{job.name}}</a></h5>
+    <div class="d-flex justify-content-between align-items-center">
+      <span class="badge bg-primary">Full time</span>
+      <span>
+        <span class="text-muted mr-5"><i class="fas fa-globe-americas mr-1"></i> Location</span>
+        <span class="text-muted"><i class="far fa-clock mr-1"></i> 3 days ago</span>
+      </span>
+    </div>
+  </div>
+</div>

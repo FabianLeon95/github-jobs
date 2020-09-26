@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+$font-family-sans-serif: 'Montserrat', sans-serif;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.hover-raise{
+  transition: all ease 300ms;
+
+  &:hover {
+    transform: translateY(-5px);
+    @extend .shadow;
+  }
+}
+
+h5 {
+  a {
+    color: unset;
+    text-decoration: none;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
