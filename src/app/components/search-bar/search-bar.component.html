@@ -1,0 +1,23 @@
+<div class="card background shadow px-lg-5">
+  <div class="card-body p-5">
+    <div class="autocomplete">
+      <div class="input-group shadow">
+        <input type="search"
+               class="form-control form-control-lg" placeholder="Search for your dreams job"
+               aria-label="Search for your dreams job" aria-describedby="button-search"
+               [(ngModel)]="searchTerm"
+               (focusin)="toggleAutocomplete()"
+               (focusout)="toggleAutocomplete()"
+               (ngModelChange)="doSearch($event)">
+        <button class="btn btn-lg btn-primary px-lg-5" type="button" id="button-search">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+      <div *ngIf="showAutocomplete" class="autocomplete-items shadow">
+        <div *ngFor="let job of filteredJobs" (click)="selectAutocompleteItem(job.name)">
+          {{job.name}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
